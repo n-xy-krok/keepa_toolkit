@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:analysis_name",
+ "creation": "2023-06-20 18:46:32.937781",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "analysis_name",
+  "price_file",
+  "sheet_name",
+  "auto_retrieve_flag",
+  "start_processing_button",
+  "status",
+  "failure_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "analysis_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "price_file",
+   "fieldtype": "Attach",
+   "label": "Price File"
+  },
+  {
+   "default": "Sheet1",
+   "fieldname": "sheet_name",
+   "fieldtype": "Data",
+   "label": "Sheet Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_retrieve_flag",
+   "fieldtype": "Check",
+   "label": "Auto retrieve"
+  },
+  {
+   "fieldname": "start_processing_button",
+   "fieldtype": "Button",
+   "label": "Start processing"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Initiated\nIn progress\nSuccess\nFailed"
+  },
+  {
+   "fieldname": "failure_reason",
+   "fieldtype": "Data",
+   "label": "Failure Reason",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-27 17:45:38.326839",
+ "modified_by": "Administrator",
+ "module": "Keepa Toolkit V2",
+ "name": "Price Analysis",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Initiated"
+  },
+  {
+   "color": "Yellow",
+   "title": "In Progress"
+  },
+  {
+   "color": "Green",
+   "title": "Success"
+  },
+  {
+   "color": "Red",
+   "title": "Failed"
+  }
+ ]
+}

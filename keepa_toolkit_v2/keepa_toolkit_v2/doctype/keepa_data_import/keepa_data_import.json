@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "autoname": "format:Data-Import-{YYYY}.{MM}.{DD}.{#####}",
+ "creation": "2023-08-16 15:05:22.882247",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cache_updating_and_extending_section",
+  "file",
+  "sheet_name",
+  "process_file_button",
+  "status",
+  "successfully_imported",
+  "failure_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "cache_updating_and_extending_section",
+   "fieldtype": "Section Break",
+   "label": "Data import"
+  },
+  {
+   "description": "Attach file exported from Keepa -> \"Product Viewer\" page",
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "File",
+   "reqd": 1
+  },
+  {
+   "default": "Sheet0",
+   "fieldname": "sheet_name",
+   "fieldtype": "Data",
+   "label": "Sheet Name"
+  },
+  {
+   "fieldname": "process_file_button",
+   "fieldtype": "Button",
+   "label": "Absorb file"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Initiated\nIn progress\nSuccess\nFailed"
+  },
+  {
+   "fieldname": "successfully_imported",
+   "fieldtype": "Read Only",
+   "label": "Successfully imported"
+  },
+  {
+   "fieldname": "failure_reason",
+   "fieldtype": "Read Only",
+   "label": "Failure reason"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-21 10:37:26.455091",
+ "modified_by": "Administrator",
+ "module": "Keepa Toolkit V2",
+ "name": "Keepa Data Import",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

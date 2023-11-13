@@ -1,0 +1,143 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"TsPHSMnH8d\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Keepa Analysis Tools</span>\",\"col\":12}},{\"id\":\"Tsoc6PoW8S\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"AYdw8Gr9Gu\",\"type\":\"card\",\"data\":{\"card_name\":\"Analysis tools\",\"col\":4}},{\"id\":\"NStdtqBQJ2\",\"type\":\"card\",\"data\":{\"card_name\":\"Suppilers\",\"col\":4}},{\"id\":\"N0tEUirGWx\",\"type\":\"card\",\"data\":{\"card_name\":\"Integration\",\"col\":4}},{\"id\":\"F-LtUvE90h\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Qo9e_Oh_Bq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Your Supplier list\",\"col\":4}},{\"id\":\"M772wUbkQe\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Your price analysis\",\"col\":4}},{\"id\":\"bFy55tvp9X\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Keepa analysis results\",\"col\":4}},{\"id\":\"LSdLqPHZ7E\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Hnwjc8vZsK\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Keepa Data Import\",\"col\":4}},{\"id\":\"LZ0nye85BL\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"LrK9BwYXV6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"UPC -> ASIN pairs\",\"col\":4}},{\"id\":\"HwhxdJMdtD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cached products count\",\"col\":4}},{\"id\":\"FCKyZ7O8o5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Objects in retrieving queue\",\"col\":4}}]",
+ "creation": "2023-06-01 17:07:03.329029",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "chart",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Keepa Analysis Tools",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Suppilers",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Suppliers",
+   "link_count": 0,
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Price Lists",
+   "link_count": 0,
+   "link_to": "Price List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Price Import",
+   "link_count": 0,
+   "link_to": "Data Import",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Analysis tools",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "New price analysis",
+   "link_count": 0,
+   "link_to": "Price Analysis",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Category Retrieving Settings",
+   "link_count": 0,
+   "link_to": "Category Retriever Job Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Integration",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Keepa Settings",
+   "link_count": 0,
+   "link_to": "Keepa Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-09-22 16:54:13.853608",
+ "modified_by": "Administrator",
+ "module": "Keepa Toolkit V2",
+ "name": "Keepa Analysis Tools",
+ "number_cards": [
+  {
+   "label": "UPC -> ASIN pairs",
+   "number_card_name": "UPC-ASIN Association count"
+  },
+  {
+   "label": "Objects in retrieving queue",
+   "number_card_name": "objects in queue"
+  },
+  {
+   "label": "Cached products count",
+   "number_card_name": "Keepa Products In Cache"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Keepa Data Import",
+   "label": "Keepa Data Import"
+  },
+  {
+   "document_type": "Keepa Analysis Result",
+   "label": "Keepa analysis results"
+  },
+  {
+   "document_type": "Supplier",
+   "label": "Your Supplier list",
+   "quick_list_filter": "{\"owner\":[\"=\",null]}"
+  },
+  {
+   "document_type": "Price Analysis",
+   "label": "Your price analysis"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "Keepa Analysis Tools"
+}
