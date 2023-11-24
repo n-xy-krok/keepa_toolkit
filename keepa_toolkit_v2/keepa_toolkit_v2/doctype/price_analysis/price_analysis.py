@@ -68,6 +68,7 @@ class PriceAnalysis(Document):
             # logger.debug(json.dumps(chunk))
             new_doc.item_list = json.dumps(chunk)
             new_doc.priority =  PriorityEnum.HIGH.value
+            new_doc.item_type = 'UPC'
             try:
                 new_doc.save()
             except frappe.exceptions.DuplicateEntryError:

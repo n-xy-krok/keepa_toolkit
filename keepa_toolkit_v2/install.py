@@ -5,6 +5,18 @@ from loguru import logger
 
 def after_install():
     
+    if not frappe.db.exists('Price Analysis', 'CategoryRetrieve'):
+        new_doc = frappe.get_doc(
+            {
+                'doctype': 'Price Analysis',
+                'label': 'CategoryRetrieve',
+                'status': 'Success'
+            }
+        )
+        new_doc.insert()
+        frappe.db.commit()
+        logger.info(f'Service doctype of type Price Analysis created with name: CategoryRetrieve')
+    
     if not frappe.db.exists('Number Card', 'Keepa Products In Cache'):
         new_doc = frappe.get_doc(
             {

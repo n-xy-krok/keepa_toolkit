@@ -118,7 +118,7 @@ scheduler_events = {
         '* * * * *': 
             [
             "keepa_toolkit_v2.tasks.keepa_product_retriever",
-            "keepa_toolkit_v2.tasks.keepa_category_retiever"
+            "keepa_toolkit_v2.tasks.keepa_category_retriever"
             ]
     },
 #	"all": [

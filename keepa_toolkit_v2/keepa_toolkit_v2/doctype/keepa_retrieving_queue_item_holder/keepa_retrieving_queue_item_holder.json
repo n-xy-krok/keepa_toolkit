@@ -10,7 +10,8 @@
  "field_order": [
   "analysis_link",
   "item_list",
-  "priority"
+  "priority",
+  "item_type"
  ],
  "fields": [
   {
@@ -31,11 +32,18 @@
    "fieldname": "item_list",
    "fieldtype": "JSON",
    "label": "Items"
+  },
+  {
+   "default": "UPC",
+   "fieldname": "item_type",
+   "fieldtype": "Select",
+   "label": "Items type",
+   "options": "UPC\nASIN"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-13 19:05:30.864171",
+ "modified": "2023-11-23 11:59:17.601743",
  "modified_by": "Administrator",
  "module": "Keepa Toolkit V2",
  "name": "Keepa Retrieving Queue Item Holder",

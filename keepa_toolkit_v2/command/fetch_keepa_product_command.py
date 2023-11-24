@@ -157,16 +157,16 @@ class FetchKeepaProductsCommand(Command):
 
         save_product_entry(compressed_product)
 
-        self.saving_strategy.save_object(
-            product,
-            asin
-        )
+        # self.saving_strategy.save_object(
+        #     product,
+        #     asin
+        # )
 
     @retry
     def connect_to_keepa(self, api_key) -> Keepa:
         return Keepa(api_key)
 
-    @retry
+    # @retry
     def keepa_query(self, *args, **kwargs):
         return self.keepa.query(*args, **kwargs)
 
@@ -178,7 +178,7 @@ class FetchKeepaProductsCommand(Command):
         self.keepa_update_status()
         if self.keepa.tokens_left < self.ASIN_LIMIT:
             print("Token limit reached")
-            raise ValueError()
+            raise ValueError("Token limit reached")
 
         products = self.keepa_query(
             self.code_list,
