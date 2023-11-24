@@ -31,6 +31,13 @@ class SavingStrategyBase(ABC):
     @abstractmethod
     def save_object(self, data, name):
         ...
+        
+class SavingStrategyMock(SavingStrategyBase):
+    def save_list(self, data, name):
+        ...
+
+    def save_object(self, data, name):
+        ...
 
 
 class LocalFileSavingStrategy(SavingStrategyBase):

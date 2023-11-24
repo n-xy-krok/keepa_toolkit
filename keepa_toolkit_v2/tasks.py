@@ -9,7 +9,7 @@ from frappe.model.document import Document
 from keepa_toolkit_v2.common.enums import PriorityEnum
 from keepa_toolkit_v2.common.utils import *
 from keepa_toolkit_v2.command.fetch_keepa_product_command import FetchKeepaProductsCommand
-from keepa_toolkit_v2.common.saving_strategies import GoogleCloudStorageSavingStrategy
+from keepa_toolkit_v2.common.saving_strategies import SavingStrategyMock
 
 from loguru import logger
 
@@ -42,16 +42,7 @@ def compile_and_run_command(item_list, api_key, item_code_is_asin: bool = True):
         "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/clever-environs-381513%40appspot.gserviceaccount.com"
     }
 
-    saving_strategy = GoogleCloudStorageSavingStrategy(
-        bucket_name='test_backet_ik',
-        file_name_prefix=file_name,
-        list_file_path='',
-        list_file_format=file_format,
-        single_file_path='files/',
-        single_file_format='pickle',
-        serializer='pickle',
-        google_storage_credentials=cloud_credentials
-    )
+    saving_strategy = SavingStrategyMock()
     
     command = FetchKeepaProductsCommand(
         api_key,

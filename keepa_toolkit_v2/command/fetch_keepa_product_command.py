@@ -14,7 +14,6 @@ from pymysql.err import IntegrityError
 from keepa_toolkit_v2.common.saving_strategies import (
     LocalFileSavingStrategy,
     FireStoreSavingStrategy,
-    GoogleCloudStorageSavingStrategy,
     SavingStrategyProtocol
 )
 from retrying import retry
