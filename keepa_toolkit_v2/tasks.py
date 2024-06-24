@@ -55,6 +55,7 @@ def compile_and_run_command(item_list, api_key, item_code_is_asin: bool = True):
         command.execute()
     except ValueError as error:
         logger.error(str(error))
+        raise error
 
 # @wraper
 def keepa_product_retriever():    

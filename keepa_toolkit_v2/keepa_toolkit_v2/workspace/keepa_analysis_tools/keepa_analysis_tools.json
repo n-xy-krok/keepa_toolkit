@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"TsPHSMnH8d\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Keepa Analysis Tools</span>\",\"col\":12}},{\"id\":\"Tsoc6PoW8S\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"AYdw8Gr9Gu\",\"type\":\"card\",\"data\":{\"card_name\":\"Analysis tools\",\"col\":4}},{\"id\":\"NStdtqBQJ2\",\"type\":\"card\",\"data\":{\"card_name\":\"Suppilers\",\"col\":4}},{\"id\":\"N0tEUirGWx\",\"type\":\"card\",\"data\":{\"card_name\":\"Integration\",\"col\":4}},{\"id\":\"F-LtUvE90h\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Qo9e_Oh_Bq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Your Supplier list\",\"col\":4}},{\"id\":\"M772wUbkQe\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Your price analysis\",\"col\":4}},{\"id\":\"bFy55tvp9X\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Keepa analysis results\",\"col\":4}},{\"id\":\"LSdLqPHZ7E\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Hnwjc8vZsK\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Keepa Data Import\",\"col\":4}},{\"id\":\"LZ0nye85BL\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"LrK9BwYXV6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"UPC -> ASIN pairs\",\"col\":4}},{\"id\":\"HwhxdJMdtD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cached products count\",\"col\":4}},{\"id\":\"FCKyZ7O8o5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Objects in retrieving queue\",\"col\":4}}]",
+ "content": "[{\"id\":\"TsPHSMnH8d\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Keepa Analysis Tools</span>\",\"col\":12}},{\"id\":\"Tsoc6PoW8S\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"AYdw8Gr9Gu\",\"type\":\"card\",\"data\":{\"card_name\":\"Analysis tools\",\"col\":4}},{\"id\":\"NStdtqBQJ2\",\"type\":\"card\",\"data\":{\"card_name\":\"Suppilers\",\"col\":4}},{\"id\":\"N0tEUirGWx\",\"type\":\"card\",\"data\":{\"card_name\":\"Integration\",\"col\":4}},{\"id\":\"F-LtUvE90h\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Qo9e_Oh_Bq\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Your Supplier list\",\"col\":4}},{\"id\":\"M772wUbkQe\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Your price analysis\",\"col\":4}},{\"id\":\"bFy55tvp9X\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Keepa analysis results\",\"col\":4}},{\"id\":\"LSdLqPHZ7E\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Hnwjc8vZsK\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Keepa Data Import\",\"col\":4}},{\"id\":\"LZ0nye85BL\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"nAYhzKOmhA\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cached products count\",\"col\":4}},{\"id\":\"LrK9BwYXV6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"UPC -> ASIN pairs\",\"col\":4}},{\"id\":\"HwhxdJMdtD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Objects In Queue\",\"col\":4}}]",
  "creation": "2023-06-01 17:07:03.329029",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -96,18 +96,18 @@
    "type": "Link"
   }
  ],
- "modified": "2023-09-22 16:54:13.853608",
+ "modified": "2023-12-05 17:45:29.139961",
  "modified_by": "Administrator",
  "module": "Keepa Toolkit V2",
  "name": "Keepa Analysis Tools",
  "number_cards": [
   {
-   "label": "UPC -> ASIN pairs",
-   "number_card_name": "UPC-ASIN Association count"
+   "label": "Objects In Queue",
+   "number_card_name": "Objects In Queue"
   },
   {
-   "label": "Objects in retrieving queue",
-   "number_card_name": "objects in queue"
+   "label": "UPC -> ASIN pairs",
+   "number_card_name": "UPC-ASIN Association count"
   },
   {
    "label": "Cached products count",

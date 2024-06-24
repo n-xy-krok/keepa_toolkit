@@ -43,7 +43,7 @@ class PriceAnalysis(Document):
         self.status = 'In progress'
         self.save()
         
-        frappe.enqueue(self.price_processing, queue='keepa_queue', job_name=f"{self.analysis_name} price analysis")
+        frappe.enqueue(self.price_processing, queue='long', job_name=f"{self.analysis_name} price analysis")
     
     def retrieve_upcs(self, upc_list):
         ...
