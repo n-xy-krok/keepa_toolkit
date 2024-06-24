@@ -6,8 +6,82 @@ function get_selected_grid_rows(frm){
 	return frm.grids[0].grid.get_selected()
 }
 
+function get_data_based_on_fieldtype(df, data, value) {
+	let fieldname = df.fieldname;
+	let fieldtype = df.fieldtype;
+	let fieldvalue = data[fieldname];
+
+	if (fieldtype === "Check") {
+		value = frappe.utils.string_to_boolean(value);
+		return Boolean(fieldvalue) === value && data;
+	} else if (fieldtype === "Sr No" && data.idx.toString().includes(value)) {
+		return data;
+	} else if (fieldtype === "Duration" && fieldvalue) {
+		let formatted_duration = frappe.utils.get_formatted_duration(fieldvalue);
+
+		if (formatted_duration.includes(value)) {
+			return data;
+		}
+	} else if (fieldtype === "Barcode" && fieldvalue) {
+		let barcode = fieldvalue.startsWith("<svg")
+			? $(fieldvalue).attr("data-barcode-value")
+			: fieldvalue;
+
+		if (barcode.toLowerCase().includes(value)) {
+			return data;
+		}
+	} else if (["Datetime", "Date"].includes(fieldtype) && fieldvalue) {
+		let user_formatted_date = frappe.datetime.str_to_user(fieldvalue);
+
+		if (user_formatted_date.includes(value)) {
+			return data;
+		}
+	} else if (["Currency", "Float", "Int", "Percent", "Rating"].includes(fieldtype)) {
+		let num = fieldvalue || 0;
+
+		if (fieldtype === "Rating") {
+			let out_of_rating = parseInt(df.options) || 5;
+			num = num * out_of_rating;
+		}
+		if (fieldname === 'profit') {
+			if (parseFloat(value) < parseFloat(fieldvalue)){
+				// console.log(parseFloat(value), parseFloat(fieldvalue))
+				// console.log(data)
+				return data
+			}
+			return null
+		}
+
+		if (num.toString().indexOf(value) > -1) {
+			return data;
+		}
+	} else if (fieldvalue && fieldvalue.toLowerCase().includes(value)) {
+		return data;
+	}
+}
+
 frappe.ui.form.on('Keepa Analysis Result', {
 	refresh(frm) {
+
+		var profit_elem = document.getElementsByName
+
+		frm.fields_dict.items.grid.get_filtered_data = () => {
+			let thi = frm.fields_dict.items.grid
+
+			let all_data = thi.frm ? thi.frm.doc[thi.df.fieldname] : thi.df.data;
+	
+			if (!all_data) return;
+	
+			for (const field in thi.filter) {
+
+				all_data = all_data.filter((data) => {
+					let { df, value } = thi.filter[field];
+					return get_data_based_on_fieldtype(df, data, value.toLowerCase());
+				});
+			}
+	
+			return all_data;
+		}
 	 
 		frm.add_custom_button(__('Export to csv'), function(){
 			frappe.call({
