@@ -105,6 +105,12 @@ class KeepaDataImport(Document):
     
     @frappe.whitelist()
     def process_exported_files(self):
+        if not self.file:
+            self.failure_reason = "The file is required"
+            self.status = 'Failed'
+            self.save()
+            return
+        
         if not self.file.endswith('.xlsx'):
             self.failure_reason = "Only .xlsx format supported"
             self.status = 'Failed'

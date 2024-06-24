@@ -206,7 +206,7 @@ class PriceAnalysis(Document):
                 try:
                     new_result_item_doc.save()
                 except frappe.exceptions.UniqueValidationError as error:
-                    self.status = 'Failure'
+                    self.status = 'Failed'
                     self.failure_reason = str(ex)
                     self.save()
                     raise error
@@ -220,7 +220,7 @@ class PriceAnalysis(Document):
         except Exception as ex:
             self.failure_reason = str(ex)
             logger.error(str(ex))
-            self.status = 'Failure'
+            self.status = 'Failed'
             self.save()
 
         
