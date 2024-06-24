@@ -85,7 +85,7 @@ def convert_to_sales_order_item(item_list, warehouse):
                 'qty': 1,
                 'rate': item.standard_rate,
                 'warehouse': warehouse,
-                'doctype': 'Sales Order Item'
+                'doctype': 'Purchase Order Item'
         }
         so_item = frappe.get_doc(body)
         result.append(so_item)
@@ -135,7 +135,7 @@ def create_items(price_analysis_items):
 
 
 @frappe.whitelist()
-def create_order_from_selected(name, selected_rows, customer, company, warehouse, currency, territory, conversion_rates):
+def create_order_from_selected(name, selected_rows, supplier, company, warehouse, currency, territory, conversion_rates):
     doc = frappe.get_doc('Keepa Analysis Result', name)
     selected_rows = json.loads(selected_rows)
     
@@ -147,14 +147,15 @@ def create_order_from_selected(name, selected_rows, customer, company, warehouse
     items = create_items(list(items))
     items = convert_to_sales_order_item(items, warehouse)
     
-    new_order = frappe.get_doc(doctype='Sales Order', **{
-        'customer': customer,
+    new_order = frappe.get_doc(doctype='Purchase Order', **{
+        'supplier': supplier,
         'transaction_date': datetime.now(),
+        'schedule_date': datetime.now(),
         'company': company,
         'currency': currency,
         'territory': territory,
-        'order_type': 'Sales',
         'conversion_rate': conversion_rates,
+        'status': 'Draft',
         'items': items,
     })
     # pprint(new_order.as_dict())

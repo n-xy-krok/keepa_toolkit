@@ -102,15 +102,18 @@ frappe.ui.form.on('Keepa Analysis Result', {
 			filters: { company: 'Med Care'}
 		}
 		frm.add_custom_button(__('Create order'), function(){
+			if (get_selected_grid_rows(frm).length <= 0){
+				frappe.msgprint("Select more products to proceed. (Checkbox)")
+				return
+			}
 			let d = new frappe.ui.Dialog({
 				title: 'Enter details',
 				fields: [
 					{
-						label: 'Customer',
-						fieldname: 'customer',
+						label: 'Supplier',
+						fieldname: 'supplier',
 						fieldtype: 'Link',
-						options: "Customer",
-						default: 'aaa'
+						options: "Supplier"
 					},
 					{
 						label: 'Company',
@@ -163,14 +166,14 @@ frappe.ui.form.on('Keepa Analysis Result', {
 						'args': {
 							'name': frm.doc.name,
 							'selected_rows': get_selected_grid_rows(frm),
-							'customer': values['customer'],
+							'supplier': values['supplier'],
 							'company': values['company'],
 							'warehouse': values['warehouse'],
 							'currency': values['currency'],
 							'territory': values['territory'],
 							'conversion_rates': values['conversion_rates'],
 							},
-						callback: function(resp) { window.location = '/app/sales-order/' + resp.message}
+						callback: function(resp) { window.location = '/app/purchase-order/' + resp.message}
 					})
 					d.hide();
 				
