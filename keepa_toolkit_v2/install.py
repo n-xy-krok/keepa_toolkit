@@ -5,6 +5,17 @@ from loguru import logger
 
 def after_install():
     
+    if not frappe.db.exists('Item Group', 'Amazon Products'):
+        new_doc = frappe.new_doc(
+            **{
+                'doctype': 'Item Group',
+                'item_group_name': 'Amazon Products'
+            }
+        )
+        new_doc.insert(set_name='Amazon Products')
+        frappe.db.commit()
+        logger.info(f'Item group Amazon Products created.')
+    
     if not frappe.db.exists('Price Analysis', 'CategoryRetrieve'):
         new_doc = frappe.new_doc(
             **{    

@@ -43,6 +43,7 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Status",
    "options": "Initiated\nIn progress\nSuccess\nFailed"
   },
@@ -59,7 +60,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-21 10:37:26.455091",
+ "modified": "2024-06-24 18:50:53.782927",
  "modified_by": "Administrator",
  "module": "Keepa Toolkit V2",
  "name": "Keepa Data Import",
