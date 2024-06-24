@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 class KeepaProductModelDto(BaseModel):
     title: str
     asin: str
-    root_category: str
+    root_category: str | None
     brand: str | None
     url: str
     count_on_amazon: int = Field(default=0)

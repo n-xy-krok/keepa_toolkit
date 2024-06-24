@@ -62,7 +62,7 @@ def save_product_compressed_data(target_dataframe: pd.DataFrame, keepa: Keepa) -
         raise ValueError(f"The document has invalid header. Missed following columns: {', '.join(delta)}")
     
     def save_product_data(entry):
-        buybox_90_avg = Decimal(entry['Buy Box: 90 days avg.']) if not numpy.isnan(entry['Buy Box: 90 days avg.']) else Decimal('0')
+        buybox_90_avg = Decimal(entry['Buy Box: 90 days avg.']) if not pd.isnull(entry['Buy Box: 90 days avg.']) else Decimal('0')
 
         reviews_count_30_days_avg: int = int(0 if numpy.isnan(entry['Reviews: Review Count - 30 days avg.']) else entry['Reviews: Review Count - 30 days avg.'])
         reviews_count_180_days_avg: int = int(0 if numpy.isnan(entry['Reviews: Review Count - 180 days avg.']) else entry['Reviews: Review Count - 180 days avg.'])
